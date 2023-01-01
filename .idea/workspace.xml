@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5ae8416-a1dd-4e7d-b502-0e811e90500a" name="Changes" comment="2023년 1월 2일,  타임리프 리스트 출력 업데이트.">
+    <list default="true" id="d5ae8416-a1dd-4e7d-b502-0e811e90500a" name="Changes" comment="2023년 1월 2일,  데이터 추가.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index_leaf.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index_leaf.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,7 +220,7 @@
       <workItem from="1672407823700" duration="6854000" />
       <workItem from="1672554917898" duration="10682000" />
       <workItem from="1672579943973" duration="4239000" />
-      <workItem from="1672586247443" duration="7854000" />
+      <workItem from="1672586247443" duration="8365000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <created>1672236359792</created>
@@ -272,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672591980551</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2023년 1월 2일,  데이터 추가.">
+      <created>1672594258828</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672594258828</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +298,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit" />
     <MESSAGE value="2023년 1월 2일,  타임리프 리스트 출력 업데이트." />
-    <option name="LAST_COMMIT_MESSAGE" value="2023년 1월 2일,  타임리프 리스트 출력 업데이트." />
+    <MESSAGE value="2023년 1월 2일,  데이터 추가." />
+    <option name="LAST_COMMIT_MESSAGE" value="2023년 1월 2일,  데이터 추가." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -92,7 +92,7 @@
                                 <a href="#" class="btn btn-primary">보기</a>
                             </div>
                             <div class="card-footer">
-                                <span th:text="${list.workPlanTag}"></span> | <span th:text="${list.workPlanStartDate}"></span> ~
+                                <span th:text="${list.workPlanTag}"></span> | <span th:text="${#temporals.format(list.workPlanStartDate, 'yyyy년 MM월 dd일')}"></span> ~
                             </div>
                         </div>
                     </div>
