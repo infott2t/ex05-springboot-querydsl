@@ -30,7 +30,7 @@ public class BaseController {
     @GetMapping("/")
     public String indexDefault(Model model){
 
-        LocalDateTime insertDate = LocalDateTime.of(2021,6,1,0,0,0);
+        LocalDateTime insertDate = LocalDateTime.of(2023,6,1,0,0,0);
         LocalDateTime now = LocalDateTime.now();
 
         WorkPlan workPlan = WorkPlan.builder()
