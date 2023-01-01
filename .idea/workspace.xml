@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5ae8416-a1dd-4e7d-b502-0e811e90500a" name="Changes" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/coperation/Coperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index_leaf_backup.html" afterDir="false" />
+    <list default="true" id="d5ae8416-a1dd-4e7d-b502-0e811e90500a" name="Changes" comment="2023년 1월 2일,  타임리프 리스트 출력 업데이트.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/serv/workplan/WorkPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/serv/workplan/WorkPlan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/serv/workplan/WorkPlanApiDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/serv/workplan/WorkPlanApiDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/serv/workplan/WorkPlanRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/serv/workplan/WorkPlanRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index_leaf.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index_leaf.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +221,7 @@
       <workItem from="1672407823700" duration="6854000" />
       <workItem from="1672554917898" duration="10682000" />
       <workItem from="1672579943973" duration="4239000" />
-      <workItem from="1672586247443" duration="5476000" />
+      <workItem from="1672586247443" duration="7854000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <created>1672236359792</created>
@@ -263,7 +258,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672562504164</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2023년 1월 2일,  타임리프 리스트 출력 업데이트.">
+      <created>1672591852151</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672591852152</updated>
+    </task>
+    <task id="LOCAL-00007" summary="2023년 1월 2일,  타임리프 리스트 출력 업데이트.">
+      <created>1672591980551</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672591980551</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,14 +291,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+    <MESSAGE value="2023년 1월 2일,  타임리프 리스트 출력 업데이트." />
+    <option name="LAST_COMMIT_MESSAGE" value="2023년 1월 2일,  타임리프 리스트 출력 업데이트." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/BaseController.java</url>
-          <line>112</line>
+          <line>136</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

@@ -43,7 +43,7 @@ public class BaseController {
                 .catchPrice("반조리 음식. 이 일은 어떤가요.")
                 .build();
 
-        WorkPlan workPlan = WorkPlan.builder()
+        WorkPlan workPlanA1 = WorkPlan.builder()
                 .workPlanTitle("배추 김치 만들기")
                 .coperation(coperationA)
                 .workPlanStatus("Y")
@@ -53,7 +53,7 @@ public class BaseController {
                 .updateDate(now)
                 .build();
 
-        WorkPlan workPlan0 = WorkPlan.builder()
+        WorkPlan workPlanA2 = WorkPlan.builder()
                 .workPlanTitle("제품 운반, 적재하기")
                 .coperation(coperationA)
                 .workPlanStatus("Y")
@@ -63,7 +63,18 @@ public class BaseController {
                 .updateDate(now)
                 .build();
 
-        WorkPlan workPlan1 = WorkPlan.builder()
+        WorkPlan workPlanA3 = WorkPlan.builder()
+                .workPlanTitle("제품 포장하기")
+                .coperation(coperationA)
+                .workPlanStatus("Y")
+                .workPlanTag("음식, 포장")
+                .workPlanStartDate(insertDate)
+                .crateDate(now)
+                .updateDate(now)
+                .build();
+
+
+        WorkPlan workPlanB1 = WorkPlan.builder()
                 .workPlanTitle("음식 재료 다듬기")
                 .coperation(coperationB)
                 .workPlanStatus("Y")
@@ -73,7 +84,7 @@ public class BaseController {
                 .updateDate(now)
                 .build();
 
-        WorkPlan workPlan2 = WorkPlan.builder()
+        WorkPlan workPlanB2 = WorkPlan.builder()
                 .workPlanTitle("음식 재료 만들기")
                 .coperation(coperationB)
                 .workPlanStatus("Y")
@@ -83,13 +94,26 @@ public class BaseController {
                 .updateDate(now)
                 .build();
 
+        WorkPlan workPlanB3 = WorkPlan.builder()
+                .workPlanTitle("제품 포장하기")
+                .coperation(coperationB)
+                .workPlanStatus("Y")
+                .workPlanTag("음식, 포장")
+                .workPlanStartDate(insertDate)
+                .crateDate(now)
+                .updateDate(now)
+                .build();
+
         coperationRepository.save(coperationA);
         coperationRepository.save(coperationB);
 
-        workPlanRepository.save(workPlan);
-        workPlanRepository.save(workPlan0);
-        workPlanRepository.save(workPlan1);
-        workPlanRepository.save(workPlan2);
+        workPlanRepository.save(workPlanA1);
+        workPlanRepository.save(workPlanA2);
+        workPlanRepository.save(workPlanA3);
+        workPlanRepository.save(workPlanB1);
+        workPlanRepository.save(workPlanB2);
+        workPlanRepository.save(workPlanB3);
+
 
         model.addAttribute("coperationLists", coperationService.searchFindAllDesc());
         model.addAttribute("workPlanLists", workPlanService.searchFindAllDesc());
