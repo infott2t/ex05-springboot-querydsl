@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
+import org.example.domain.coperation.Coperation;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -21,7 +22,13 @@ public class WorkPlan {
     @Column(name = "T_WORKPLAN_ID")
     private Long id;    //아이디
 
-    private String workPlanCooperation; //협력사
+
+    //private String workPlanCooperation; //협력사
+
+    @ManyToOne(targetEntity = Coperation.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "T_COPERATION_ID")
+    private Coperation coperation; //협력사
+
 
     private String workPlanTitle;  //제목
 

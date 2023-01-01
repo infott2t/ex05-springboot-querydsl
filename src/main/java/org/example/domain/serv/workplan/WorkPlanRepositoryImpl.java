@@ -17,6 +17,7 @@ import java.util.List;
 //import static goodshop.board.alliance.QAlliance.alliance;
 
 import static org.example.domain.serv.workplan.QWorkPlan.workPlan;
+import static org.example.domain.coperation.QCoperation.coperation;
 import static org.springframework.util.StringUtils.hasText;
 
 
@@ -36,15 +37,16 @@ public class WorkPlanRepositoryImpl implements WorkPlanRepositoryCustom {
 
         List<WorkPlanApiDto> content = queryFactory.
                 select(Projections.constructor(WorkPlanApiDto.class,
-                        workPlan.id    ,
-                        workPlan.workPlanCooperation,
-                        workPlan.workPlanTitle ,
+                        workPlan.id,
+                        workPlan.coperation,
+                        workPlan.workPlanTitle,
                         workPlan.workPlanTag ,
                         workPlan.workPlanStatus ,
                         workPlan.workPlanStartDate  ,
                         workPlan.crateDate    ,
                         workPlan.updateDate
                 )).from(workPlan)
+                .join(workPlan.coperation, coperation)
                 .where(
                      //   searchAllV2Predicate(condition)
                 )
@@ -130,15 +132,16 @@ public class WorkPlanRepositoryImpl implements WorkPlanRepositoryCustom {
     public List<WorkPlanApiDto> searchFindAllDesc() {
         List<WorkPlanApiDto> content = queryFactory.
                 select(Projections.constructor(WorkPlanApiDto.class,
-                      workPlan.id    ,
-                      workPlan.workPlanCooperation,
-                      workPlan.workPlanTitle ,
-                      workPlan.workPlanTag ,
-                      workPlan.workPlanStatus ,
-                      workPlan.workPlanStartDate  ,
-                      workPlan.crateDate    ,
-                      workPlan.updateDate
+                        workPlan.id,
+                        workPlan.coperation,
+                        workPlan.workPlanTitle,
+                        workPlan.workPlanTag ,
+                        workPlan.workPlanStatus ,
+                        workPlan.workPlanStartDate  ,
+                        workPlan.crateDate    ,
+                        workPlan.updateDate
                 )).from(workPlan)
+                .join(workPlan.coperation, coperation)
                 .orderBy(workPlan.id.asc())
                 .fetch();
 

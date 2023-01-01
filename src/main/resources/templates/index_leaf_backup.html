@@ -76,33 +76,102 @@
 
 
 
-   <!-- <h5> A 푸드. 음식. 김치를 만들어보세요.</h5>-->
     <br />
- <th:block th:each="coList: ${coperationLists}">
-     <h5><span th:text="${coList.coperationName}"></span>, <span th:text="${coList.catchPrice}"></span></h5>
-     <br/>
-                <div class="row  justify-content-center" >
-                    <div class="col d-flex justify-content-center" th:each="list : ${workPlanLists}" th:if="${coList.coperationName == list.coperation.coperationName}" >
-                        <div class="card" style="width: 18rem;">
 
-                            <div class="card-body">
-                                <h5 class="card-title" th:text="${list.coperation.coperationName}"></h5>
-                                <p class="card-text" th:text="${list.workPlanTitle}"></p>
-                                <a href="#" class="btn btn-primary">보기</a>
-                            </div>
-                            <div class="card-footer">
-                                <span th:text="${list.workPlanTag}"></span> | <span th:text="${list.workPlanStartDate}"></span> ~
-                            </div>
-                        </div>
-                    </div>
+    <br />
+    <h5> A 푸드. 음식. 김치를 만들어보세요.</h5>
+    <br />
+    <div class="row  justify-content-center">
+        <div class="col d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+
+                <div class="card-body">
+                    <h5 class="card-title">A 푸드</h5>
+                    <p class="card-text">배추 김치 만들기</p>
+                    <a href="kimchi.html" class="btn btn-primary">보기</a>
                 </div>
-     <br />
-     <hr />
-     <br />
- </th:block>
+                <div class="card-footer">
+                    음식, 요리 | 2021년 6월 21일 ~
+                </div>
+            </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">A 푸드</h5>
+                    <p class="card-text">제품 운반, 적재하기</p>
+                    <a href="#" class="btn btn-primary disabled">보기</a>
+                </div>
+                <div class="card-footer">
+                    음식, 창고 | 2021년 6월 21일 ~
+                </div>
+            </div>
+        </div>
+
+        <div class="col  d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+
+                <div class="card-body">
+                    <h5 class="card-title">A 푸드</h5>
+                    <p class="card-text">제품 포장하기</p>
+                    <a href="#" class="btn btn-primary disabled">보기</a>
+                </div>
 
 
+                <div class="card-footer">
+                    음식, 포장 | 2021년 6월 21일 ~
+                </div>
+            </div>
+        </div>
 
+    </div>
+    <br />
+    <hr />
+    <br />
+    <h5> B 푸드. 반조리 음식. 이 일은 어떤가요.</h5>
+
+    <br />
+    <div class="row">
+        <div class="col  d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">B 푸드</h5>
+                    <p class="card-text">음식 재료 다듬기</p>
+                    <a href="#" class="btn btn-primary disabled">보기</a>
+                </div>
+                <div class="card-footer">
+                    음식, 요리 | 2021년 6월 21일 ~
+                </div>
+            </div>
+        </div>
+        <div class="col  d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+
+                <div class="card-body">
+                    <h5 class="card-title">B 푸드</h5>
+                    <p class="card-text">음식 재료 만들기</p>
+                    <a href="#" class="btn btn-primary disabled">보기</a>
+                </div>
+                <div class="card-footer">
+                    음식, 요리 | 2021년 6월 21일 ~
+                </div>
+            </div>
+        </div>
+        <div class="col  d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+
+                <div class="card-body">
+                    <h5 class="card-title">B 푸드</h5>
+                    <p class="card-text">제품 포장하기</p>
+                    <a href="#" class="btn btn-primary disabled">보기</a>
+                </div>
+                <div class="card-footer">
+                    음식, 포장 | 2021년 6월 21일 ~
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
 <br />
 <br />

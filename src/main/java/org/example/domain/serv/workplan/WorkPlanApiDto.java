@@ -1,15 +1,16 @@
 package org.example.domain.serv.workplan;
 import com.querydsl.core.annotations.QueryProjection;
 import lombok.Data;
+import org.example.domain.coperation.Coperation;
 
 import java.time.LocalDateTime;
 
 @Data
-
 public class WorkPlanApiDto {
     private Long id    ;
 
-    private String workPlanCooperation;
+   // private String workPlanCooperation;
+    private Coperation coperation;
     private String workPlanTitle ;
     private String workPlanTag ;
     private String workPlanStatus ;
@@ -20,12 +21,12 @@ public class WorkPlanApiDto {
 
     @QueryProjection
     public WorkPlanApiDto( Long id    
-, String workPlanCooperation, String workPlanTitle , String workPlanTag , String workPlanStatus 
+, Coperation coperation, String workPlanTitle , String workPlanTag , String workPlanStatus
 , LocalDateTime workPlanStartDate  , LocalDateTime crateDate    , LocalDateTime updateDate 
 ) {
      this.id     = id    ;
 
-     this.workPlanCooperation = workPlanCooperation;
+     this.coperation = coperation;
      this.workPlanTitle  = workPlanTitle ;
      this.workPlanTag  = workPlanTag ;
      this.workPlanStatus  = workPlanStatus ;

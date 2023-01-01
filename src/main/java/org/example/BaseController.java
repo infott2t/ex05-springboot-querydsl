@@ -1,31 +1,31 @@
 package org.example;
 
 import lombok.RequiredArgsConstructor;
+import org.example.domain.coperation.Coperation;
+import org.example.domain.coperation.CoperationRepository;
+import org.example.domain.coperation.CoperationService;
 import org.example.domain.member.MemberDto;
 import org.example.domain.member.MemberService;
 import org.example.domain.serv.workplan.WorkPlan;
 import org.example.domain.serv.workplan.WorkPlanRepository;
-import org.example.domain.serv.workplan.WorkPlanRepositoryImpl;
 import org.example.domain.serv.workplan.WorkPlanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.time.LocalDateTime;
 
 @RequiredArgsConstructor
 @Controller
 public class BaseController {
-    @Autowired
-    private MemberService memberService;
-    @Autowired
-    private WorkPlanService workPlanService;
-    @Autowired
-    private WorkPlanRepository workPlanRepository;
+
+    private final MemberService memberService;
+    private final WorkPlanService workPlanService;
+    private final WorkPlanRepository workPlanRepository;
+    private final CoperationService coperationService;
+    private final CoperationRepository coperationRepository;
 
     @GetMapping("/")
     public String indexDefault(Model model){
@@ -33,9 +33,19 @@ public class BaseController {
         LocalDateTime insertDate = LocalDateTime.of(2023,6,1,0,0,0);
         LocalDateTime now = LocalDateTime.now();
 
+        Coperation coperationA = Coperation.builder()
+                .coperationName("A 푸드")
+                .catchPrice("김치를 만들어보세요.")
+                .build();
+
+        Coperation coperationB = Coperation.builder()
+                .coperationName("B 푸드")
+                .catchPrice("반조리 음식. 이 일은 어떤가요.")
+                .build();
+
         WorkPlan workPlan = WorkPlan.builder()
                 .workPlanTitle("배추 김치 만들기")
-                .workPlanCooperation("A 푸드")
+                .coperation(coperationA)
                 .workPlanStatus("Y")
                 .workPlanTag("음식, 요리")
                 .workPlanStartDate(insertDate)
@@ -45,7 +55,7 @@ public class BaseController {
 
         WorkPlan workPlan0 = WorkPlan.builder()
                 .workPlanTitle("제품 운반, 적재하기")
-                .workPlanCooperation("A 푸드")
+                .coperation(coperationA)
                 .workPlanStatus("Y")
                 .workPlanTag("음식, 창고")
                 .workPlanStartDate(insertDate)
@@ -55,7 +65,7 @@ public class BaseController {
 
         WorkPlan workPlan1 = WorkPlan.builder()
                 .workPlanTitle("음식 재료 다듬기")
-                .workPlanCooperation("B 푸드")
+                .coperation(coperationB)
                 .workPlanStatus("Y")
                 .workPlanTag("음식, 요리")
                 .workPlanStartDate(insertDate)
@@ -65,7 +75,7 @@ public class BaseController {
 
         WorkPlan workPlan2 = WorkPlan.builder()
                 .workPlanTitle("음식 재료 만들기")
-                .workPlanCooperation("B 푸드")
+                .coperation(coperationB)
                 .workPlanStatus("Y")
                 .workPlanTag("음식, 요리")
                 .workPlanStartDate(insertDate)
@@ -73,12 +83,16 @@ public class BaseController {
                 .updateDate(now)
                 .build();
 
+        coperationRepository.save(coperationA);
+        coperationRepository.save(coperationB);
+
         workPlanRepository.save(workPlan);
         workPlanRepository.save(workPlan0);
         workPlanRepository.save(workPlan1);
         workPlanRepository.save(workPlan2);
 
-        model.addAttribute("workPlanList", workPlanService.searchFindAllDesc());
+        model.addAttribute("coperationLists", coperationService.searchFindAllDesc());
+        model.addAttribute("workPlanLists", workPlanService.searchFindAllDesc());
 
         return "index_leaf";
     }
