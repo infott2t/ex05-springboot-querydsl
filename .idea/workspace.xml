@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5ae8416-a1dd-4e7d-b502-0e811e90500a" name="Changes" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/serv/workplan/WorkPlan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index_leaf.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index_leaf.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +118,7 @@
       <recent name="C:\Users\ee323\IdeaProjects\1228\ex05-springboot-querydsl\src\main\resources\static\css" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ex05-springboot-querydsl [compileJava]">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="ex05-springboot-querydsl [cleanQuerydslSourcesDir]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -201,8 +201,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ex05-springboot-querydsl [compileJava]" />
         <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="Gradle.ex05-springboot-querydsl [compileJava]" />
         <item itemvalue="Gradle.ex05-springboot-querydsl [cleanQuerydslSourcesDir]" />
       </list>
     </recent_temporary>
@@ -218,7 +218,7 @@
       <workItem from="1672235898322" duration="26000" />
       <workItem from="1672235955598" duration="16408000" />
       <workItem from="1672407823700" duration="6854000" />
-      <workItem from="1672554917898" duration="4820000" />
+      <workItem from="1672554917898" duration="7009000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <created>1672236359792</created>
@@ -227,7 +227,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672236359792</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit">
+      <created>1672560156753</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672560156753</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit">
+      <created>1672560267856</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672560267856</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +267,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/BaseController.java</url>
-          <line>91</line>
+          <line>98</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

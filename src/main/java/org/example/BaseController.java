@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.example.domain.member.MemberDto;
 import org.example.domain.member.MemberService;
 import org.example.domain.serv.workplan.WorkPlan;
+import org.example.domain.serv.workplan.WorkPlanRepository;
 import org.example.domain.serv.workplan.WorkPlanRepositoryImpl;
 import org.example.domain.serv.workplan.WorkPlanService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +22,10 @@ import java.time.LocalDateTime;
 public class BaseController {
     @Autowired
     private MemberService memberService;
-
+    @Autowired
     private WorkPlanService workPlanService;
+    @Autowired
+    private WorkPlanRepository workPlanRepository;
 
     @GetMapping("/")
     public String indexDefault(Model model){
@@ -70,6 +73,10 @@ public class BaseController {
                 .updateDate(now)
                 .build();
 
+        workPlanRepository.save(workPlan);
+        workPlanRepository.save(workPlan0);
+        workPlanRepository.save(workPlan1);
+        workPlanRepository.save(workPlan2);
 
         model.addAttribute("workPlanList", workPlanService.searchFindAllDesc());
 
