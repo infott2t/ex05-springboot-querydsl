@@ -21,11 +21,14 @@ public class Member {
     private String username;
     private String password;
 
+    private String role;
+
     @Builder
-    public Member(Long id, String userName, String password) {
+    public Member(Long id, String userName, String password, String role) {
         this.id = id;
         this.username = userName;
         this.password = password;
+        this.role = role;
     }
 
 }

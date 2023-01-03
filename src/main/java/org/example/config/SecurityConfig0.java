@@ -13,10 +13,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
-@Configuration
-@EnableWebSecurity
-@AllArgsConstructor
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+//@Configuration
+//@EnableWebSecurity
+//@AllArgsConstructor
+public class SecurityConfig0 extends WebSecurityConfigurerAdapter {
 
     private MemberService memberService;
 

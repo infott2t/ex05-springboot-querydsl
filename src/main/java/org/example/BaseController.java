@@ -1,9 +1,11 @@
 package org.example;
 
 import lombok.RequiredArgsConstructor;
+import org.example.config.auth.dto.SessionUser;
 import org.example.domain.coperation.Coperation;
 import org.example.domain.coperation.CoperationRepository;
 import org.example.domain.coperation.CoperationService;
+import org.example.domain.member.Member;
 import org.example.domain.member.MemberDto;
 import org.example.domain.member.MemberService;
 import org.example.domain.serv.workplan.WorkPlan;
@@ -15,6 +17,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.time.LocalDateTime;
 
 @RequiredArgsConstructor
@@ -27,8 +31,11 @@ public class BaseController {
     private final CoperationService coperationService;
     private final CoperationRepository coperationRepository;
 
+    private final HttpSession httpSession;
+
     @GetMapping("/")
     public String indexDefault(Model model){
+
 
         LocalDateTime insertDate = LocalDateTime.of(2023,6,1,0,0,0);
         LocalDateTime now = LocalDateTime.now();
@@ -114,11 +121,36 @@ public class BaseController {
         workPlanRepository.save(workPlanB2);
         workPlanRepository.save(workPlanB3);
 
+        SessionUser user = (SessionUser) httpSession.getAttribute("user");
+
+
 
         model.addAttribute("coperationLists", coperationService.searchFindAllDesc());
         model.addAttribute("workPlanLists", workPlanService.searchFindAllDesc());
+        if(user!=null){
+            model.addAttribute("userName", user.getName());
+        }
 
-        return "index_leaf";
+/*
+        Member loginMember = (Member) session.getAttribute("loginMember");
+        if(loginMember != null) {
+            System.out.println(loginMember.getRole() + " ROLE--------------");
+        }
+
+        if(loginMember == null) {
+            return "index_leaf";
+        }else{
+            if(loginMember.getRole().equals("ROLE_ADMIN")) {
+                return "admin/index";
+            } else if (loginMember.getRole().equals("ROLE_USER")) {
+                return "index_leaf";
+            } else if (loginMember.getRole().equals("ROLE_COMPANY")){
+                return "company/index_leaf";
+            }
+        }
+
+*/
+        return "index_log_leaf";
     }
 
     @GetMapping("/signup")
@@ -141,5 +173,18 @@ public class BaseController {
     @GetMapping("/login")
     public String login(){
         return "login";
+    }
+
+    @PostMapping("/login")
+    public String login(HttpServletRequest request){
+
+        HttpSession session = request.getSession();
+
+        System.out.println("USER NAME : " + request.getParameter("username"));
+
+        //session.setAttribute("role", "admin");
+        //session.setAttribute("loginMember", member);
+
+        return "index_leaf";
     }
 }

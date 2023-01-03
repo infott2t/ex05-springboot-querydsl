@@ -14,14 +14,16 @@ public class MemberDto {
     private String userEmail;
     private String password;
 
+    private String role;
+
 
 
     @Builder
-    public MemberDto(Long id, String username, String password) {
+    public MemberDto(Long id, String username, String password, String role) {
         this.id=id;
         this.username = username;
-
         this.password = password;
+        this.role = role;
     }
 
 
@@ -31,6 +33,7 @@ public class MemberDto {
                 id(id).
                 userName(username).
                 password(password).
+                role(role).
                 build();
     }
 }
