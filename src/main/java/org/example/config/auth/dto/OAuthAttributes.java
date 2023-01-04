@@ -5,6 +5,7 @@ import lombok.Getter;
 import org.example.domain.user.Role;
 import org.example.domain.user.User;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 @Getter
@@ -55,6 +56,7 @@ public class OAuthAttributes {
     }
 
     public User toEntity() {
+
         return User.builder()
                 .name(name)
                 .email(email)

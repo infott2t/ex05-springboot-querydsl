@@ -5,26 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5ae8416-a1dd-4e7d-b502-0e811e90500a" name="Changes" comment="2023년 1월 2일,  구글 간편로그인 구현.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/config/auth/CustomOAuth2UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/config/auth/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/config/auth/dto/OAuthAttributes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/config/auth/dto/SessionUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/BaseTimeEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/user/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/user/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/company/index_leaf.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index_log_leaf.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MyPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/form/mypage/RoleRadioForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/form/mypage/RoleRadioItemType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/admin/RoleADMIN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/company/RoleCOMPANY.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/guest/RoleGUEST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/user/RoleUSER.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/SecurityConfig0.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/member/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/member/MemberDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/member/MemberDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/member/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/member/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/member/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/member/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/auth/CustomOAuth2UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/auth/CustomOAuth2UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/auth/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/auth/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/auth/dto/OAuthAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/auth/dto/OAuthAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/auth/dto/SessionUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/auth/dto/SessionUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/user/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/user/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index_leaf.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index_leaf.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index_log_leaf.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index_log_leaf.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signupForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signupForm.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,8 +75,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -117,9 +116,11 @@
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ee323/IdeaProjects/1230/ex05-springboot-querydsl/src/main/resources/templates/company",
+    "last_opened_file_path": "C:/Users/ee323/IdeaProjects/1230/ex05-springboot-querydsl/src/main/resources/templates/mypage",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -130,11 +131,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.domain.form.mypage" />
+      <recent name="org.example.domain.roleclass" />
+      <recent name="org.example.domain.user" />
       <recent name="org.example.config.auth.dto" />
       <recent name="org.example.config.auth" />
-      <recent name="org.example.domain.mamber" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ee323\IdeaProjects\1230\ex05-springboot-querydsl\src\main\resources\templates\mypage" />
       <recent name="C:\Users\ee323\IdeaProjects\1230\ex05-springboot-querydsl\src\main\resources\templates\company" />
       <recent name="C:\Users\ee323\IdeaProjects\1230\ex05-springboot-querydsl\src\main\resources\templates" />
       <recent name="C:\Users\ee323\IdeaProjects\1228\ex05-springboot-querydsl\src\main\resources\static\css" />
@@ -186,6 +190,27 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="ex05-springboot-querydsl [compileQuerydsl]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="compileQuerydsl" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="ex05-springboot-querydsl" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -220,6 +245,7 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.ex05-springboot-querydsl" />
+      <item itemvalue="Gradle.ex05-springboot-querydsl [compileQuerydsl]" />
       <item itemvalue="Gradle.ex05-springboot-querydsl [cleanQuerydslSourcesDir]" />
       <item itemvalue="Gradle.ex05-springboot-querydsl [compileJava]" />
       <item itemvalue="Spring Boot.Application" />
@@ -228,6 +254,7 @@
       <list>
         <item itemvalue="Spring Boot.Application" />
         <item itemvalue="Gradle.ex05-springboot-querydsl [compileJava]" />
+        <item itemvalue="Gradle.ex05-springboot-querydsl [compileQuerydsl]" />
         <item itemvalue="Gradle.ex05-springboot-querydsl [cleanQuerydslSourcesDir]" />
       </list>
     </recent_temporary>
@@ -246,7 +273,9 @@
       <workItem from="1672554917898" duration="10682000" />
       <workItem from="1672579943973" duration="4239000" />
       <workItem from="1672586247443" duration="9147000" />
-      <workItem from="1672763578559" duration="9416000" />
+      <workItem from="1672763578559" duration="21550000" />
+      <workItem from="1672788200431" duration="10000" />
+      <workItem from="1672850971995" duration="10357000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <created>1672236359792</created>
@@ -311,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672594768156</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="2023년 1월 2일,  구글 간편로그인 구현.">
+      <created>1672774509214</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1672774509215</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +377,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/BaseController.java</url>
-          <line>168</line>
+          <line>182</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

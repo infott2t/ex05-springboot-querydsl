@@ -6,6 +6,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+import javax.servlet.http.HttpSession;
+
 @RequiredArgsConstructor
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -25,6 +27,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .logoutSuccessUrl("/")
+                .addLogoutHandler((request,response,authentication) -> {
+                    HttpSession session = request.getSession();
+                    if(session != null) {
+                        session.invalidate();
+                    }
+                })
                 .and()
                 .oauth2Login()
                 .userInfoEndpoint()

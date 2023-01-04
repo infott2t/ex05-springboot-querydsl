@@ -12,12 +12,16 @@ import org.example.domain.serv.workplan.WorkPlan;
 import org.example.domain.serv.workplan.WorkPlanRepository;
 import org.example.domain.serv.workplan.WorkPlanService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.time.LocalDateTime;
 
@@ -36,7 +40,7 @@ public class BaseController {
     @GetMapping("/")
     public String indexDefault(Model model){
 
-
+/*
         LocalDateTime insertDate = LocalDateTime.of(2023,6,1,0,0,0);
         LocalDateTime now = LocalDateTime.now();
 
@@ -120,7 +124,7 @@ public class BaseController {
         workPlanRepository.save(workPlanB1);
         workPlanRepository.save(workPlanB2);
         workPlanRepository.save(workPlanB3);
-
+*/
         SessionUser user = (SessionUser) httpSession.getAttribute("user");
 
 
@@ -128,9 +132,9 @@ public class BaseController {
         model.addAttribute("coperationLists", coperationService.searchFindAllDesc());
         model.addAttribute("workPlanLists", workPlanService.searchFindAllDesc());
         if(user!=null){
-            model.addAttribute("userName", user.getName());
+            model.addAttribute("userNameStr", user.getName());
         }
-
+        //세션 정보를 통해서, 뷰페이지 리턴 바꿈.
 /*
         Member loginMember = (Member) session.getAttribute("loginMember");
         if(loginMember != null) {
@@ -154,8 +158,17 @@ public class BaseController {
     }
 
     @GetMapping("/signup")
-    public String signupForm(Model model){
+    public String signupForm(Model model, HttpServletRequest request){
+        //HttpSession session = request.getSession();
+/*
+        SessionUser user = (SessionUser) httpSession.getAttribute("user");
+
+        if(user!=null){
+            model.addAttribute("userName", user.getName());
+        }
         model.addAttribute("member", new MemberDto());
+        */
+
         return "signupForm";
     }
 
@@ -163,6 +176,7 @@ public class BaseController {
     public String testBoard(){
         return "test/board";
     }
+
 
     @PostMapping("/signup")
     public String signup( MemberDto memberDto){
@@ -186,5 +200,22 @@ public class BaseController {
         //session.setAttribute("loginMember", member);
 
         return "index_leaf";
+    }
+
+    @GetMapping("/logout")
+    public String logout(Model model, HttpServletRequest request, HttpServletResponse response){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        if(authentication != null && authentication.isAuthenticated()){
+            new SecurityContextLogoutHandler().logout(request, response, authentication);
+        }
+        HttpSession session = request.getSession();
+        session.removeAttribute("user");
+        session.invalidate();
+        httpSession.invalidate();
+        httpSession.removeAttribute("user");
+        //model.addAttribute("userName", null);
+
+        return "redirect:/";
     }
 }

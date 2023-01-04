@@ -49,13 +49,13 @@
                         <a sec:authorize="isAuthenticated()" class="nav-link" href="#">출근 하기</a>
                     </li>
                     <li class="nav-item">
-                        <a sec:authorize="isAuthenticated()" class="nav-link" href="#">마이 페이지</a>
+                        <a sec:authorize="isAuthenticated()" class="nav-link" th:href="@{/mypage/index}">마이 페이지</a>
                     </li>
                     <li class="nav-item">
                         <a sec:authorize="isAuthenticated()" class="nav-link" th:href="@{/test/board}">test 게시판</a>
                     </li>
                     <li>
-                        <a sec:authorize="isAuthenticated()" class="nav-link">안녕하세요. <span th:text="${userName}"></span>님</a>
+                        <a sec:authorize="isAuthenticated()" class="nav-link">안녕하세요. <span th:text="${userNameStr}"></span>님</a>
                     </li>
                     <li>
                         <a sec:authorize="isAnonymous()" class="nav-link" th:href="@{/oauth2/authorization/google}">Google 로그인</a>

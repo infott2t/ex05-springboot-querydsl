@@ -3,15 +3,14 @@ package org.example.domain.user;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 import org.example.domain.BaseTimeEntity;
+import org.example.domain.roleclass.admin.RoleADMIN;
+import org.example.domain.roleclass.company.RoleCOMPANY;
+import org.example.domain.roleclass.guest.RoleGUEST;
+import org.example.domain.roleclass.user.RoleUSER;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
@@ -30,6 +29,23 @@ public class User extends BaseTimeEntity {
 
     @Column
     private String picture;
+
+    @ManyToOne(targetEntity = RoleGUEST.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "ROLE_GUEST_ID")
+    private RoleGUEST roleGuest;
+
+    @ManyToOne(targetEntity = RoleUSER.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "ROLE_USER_ID")
+    private RoleUSER roleUser;
+
+    @ManyToOne(targetEntity = RoleCOMPANY.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "ROLE_COMPANY_ID")
+    private RoleCOMPANY roleCompany;
+
+    @ManyToOne(targetEntity = RoleADMIN.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "ROLE_ADMIN_ID")
+    private RoleADMIN roleAdmin;
+
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
