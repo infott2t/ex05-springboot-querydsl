@@ -4,26 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5ae8416-a1dd-4e7d-b502-0e811e90500a" name="Changes" comment="2023년 1월 2일,  구글 간편로그인 구현.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MyPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/form/mypage/RoleRadioForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/form/mypage/RoleRadioItemType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/admin/RoleADMIN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/company/RoleCOMPANY.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/guest/RoleGUEST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/user/RoleUSER.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/index.html" afterDir="false" />
+    <list default="true" id="d5ae8416-a1dd-4e7d-b502-0e811e90500a" name="Changes" comment="2023년 1월 5일,  마이페이지 구현.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/auth/CustomOAuth2UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/auth/CustomOAuth2UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/auth/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/auth/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/auth/dto/OAuthAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/auth/dto/OAuthAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/auth/dto/SessionUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/auth/dto/SessionUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/user/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/user/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index_leaf.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index_leaf.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index_log_leaf.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index_log_leaf.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signupForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signupForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MyPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MyPageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,7 +258,7 @@
       <workItem from="1672586247443" duration="9147000" />
       <workItem from="1672763578559" duration="21550000" />
       <workItem from="1672788200431" duration="10000" />
-      <workItem from="1672850971995" duration="10357000" />
+      <workItem from="1672850971995" duration="11784000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <created>1672236359792</created>
@@ -347,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672774509215</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="2023년 1월 5일,  마이페이지 구현.">
+      <created>1672861540193</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1672861540193</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +360,8 @@
     <MESSAGE value="2023년 1월 2일,  데이터 추가." />
     <MESSAGE value="2023년 1월 2일,  타임리프 날짜 포멧 설정." />
     <MESSAGE value="2023년 1월 2일,  구글 간편로그인 구현." />
-    <option name="LAST_COMMIT_MESSAGE" value="2023년 1월 2일,  구글 간편로그인 구현." />
+    <MESSAGE value="2023년 1월 5일,  마이페이지 구현." />
+    <option name="LAST_COMMIT_MESSAGE" value="2023년 1월 5일,  마이페이지 구현." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

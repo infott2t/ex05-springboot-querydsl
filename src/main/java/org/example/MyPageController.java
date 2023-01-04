@@ -13,10 +13,7 @@ import org.example.domain.serv.workplan.WorkPlanRepository;
 import org.example.domain.serv.workplan.WorkPlanService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 
@@ -62,8 +59,8 @@ public class MyPageController {
     }
 
     @PostMapping("/mypage/changeRole")
-    public String indexDefault(Model model, @RequestParam(value = "role", required = false) String role){
-        System.out.println("Role::::: " + role);
+    public String indexDefault(Model model, RoleRadioForm role){
+        System.out.println("Role::::: " + role.getRoleRadioItemType());
         SessionUser user = (SessionUser) httpSession.getAttribute("user");
 
         if(user!=null){
