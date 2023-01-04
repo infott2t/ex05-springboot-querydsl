@@ -72,4 +72,6 @@ public class MemberService implements UserDetailsService {
 
         return new User(member.getUsername(), member.getPassword(), authorities);
     }
+
+
 }

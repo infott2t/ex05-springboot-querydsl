@@ -3,6 +3,7 @@ package org.example.domain.user;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import org.example.domain.BaseTimeEntity;
 import org.example.domain.roleclass.admin.RoleADMIN;
@@ -13,6 +14,7 @@ import org.example.domain.roleclass.user.RoleUSER;
 import javax.persistence.*;
 
 @Getter
+@Setter
 @NoArgsConstructor
 @Entity
 public class User extends BaseTimeEntity {
@@ -62,6 +64,12 @@ public class User extends BaseTimeEntity {
     public User update(String name, String picture) {
         this.name = name;
         this.picture = picture;
+
+        return this;
+    }
+
+    public User updateRole(Role role) {
+        this.role = role;
 
         return this;
     }

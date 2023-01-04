@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5ae8416-a1dd-4e7d-b502-0e811e90500a" name="Changes" comment="2023년 1월 5일,  마이페이지 구현.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/user/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MyPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MyPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/auth/dto/SessionUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/auth/dto/SessionUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/member/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/member/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/user/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,9 +118,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.domain.user" />
       <recent name="org.example.domain.form.mypage" />
       <recent name="org.example.domain.roleclass" />
-      <recent name="org.example.domain.user" />
       <recent name="org.example.config.auth.dto" />
       <recent name="org.example.config.auth" />
     </key>
@@ -258,7 +262,7 @@
       <workItem from="1672586247443" duration="9147000" />
       <workItem from="1672763578559" duration="21550000" />
       <workItem from="1672788200431" duration="10000" />
-      <workItem from="1672850971995" duration="11784000" />
+      <workItem from="1672850971995" duration="13394000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <created>1672236359792</created>
@@ -337,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672861540193</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="2023년 1월 5일,  마이페이지 구현.">
+      <created>1672863996297</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1672863996297</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
