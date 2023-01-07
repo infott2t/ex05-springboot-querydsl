@@ -15,4 +15,9 @@ public class CoperationService {
     public List<CoperationApiDto> searchFindAllDesc() {
         return  coperationRepository.searchFindAllDesc();
     }
+
+    @Transactional(readOnly = true)
+    public Coperation findById(Long id) {
+        return coperationRepository.findById(id).orElseThrow();
+    }
 }

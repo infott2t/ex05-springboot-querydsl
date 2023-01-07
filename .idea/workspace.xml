@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5ae8416-a1dd-4e7d-b502-0e811e90500a" name="Changes" comment="2023년 1월 5일,  마이페이지 구현.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/user/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/address/AddressStr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/phone/PhoneStr.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MyPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MyPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/auth/dto/SessionUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/auth/dto/SessionUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/member/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/member/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/BaseTimeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/BaseTimeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/coperation/CoperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/coperation/CoperationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/admin/RoleADMIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/admin/RoleADMIN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/company/RoleCOMPANY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/company/RoleCOMPANY.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/guest/RoleGUEST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/guest/RoleGUEST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/user/RoleUSER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/roleclass/user/RoleUSER.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index_log_leaf.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index_log_leaf.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +90,7 @@
     <option name="myId2Visible">
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
@@ -101,8 +109,10 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelOrder2": "2",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RequestMappingsPanelWidth2": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -118,11 +128,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.domain.address.AddressStr" />
       <recent name="org.example.domain.user" />
       <recent name="org.example.domain.form.mypage" />
       <recent name="org.example.domain.roleclass" />
       <recent name="org.example.config.auth.dto" />
-      <recent name="org.example.config.auth" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ee323\IdeaProjects\1230\ex05-springboot-querydsl\src\main\resources\templates\mypage" />
@@ -132,6 +142,9 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ee323\IdeaProjects\1230\ex05-springboot-querydsl\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.domain" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
@@ -241,8 +254,8 @@
       <list>
         <item itemvalue="Spring Boot.Application" />
         <item itemvalue="Gradle.ex05-springboot-querydsl [compileJava]" />
-        <item itemvalue="Gradle.ex05-springboot-querydsl [compileQuerydsl]" />
         <item itemvalue="Gradle.ex05-springboot-querydsl [cleanQuerydslSourcesDir]" />
+        <item itemvalue="Gradle.ex05-springboot-querydsl [compileQuerydsl]" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +275,9 @@
       <workItem from="1672586247443" duration="9147000" />
       <workItem from="1672763578559" duration="21550000" />
       <workItem from="1672788200431" duration="10000" />
-      <workItem from="1672850971995" duration="13394000" />
+      <workItem from="1672850971995" duration="14875000" />
+      <workItem from="1673008524962" duration="20493000" />
+      <workItem from="1673087643985" duration="8640000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <created>1672236359792</created>
@@ -348,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672863996297</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="2023년 1월 5일,  마이페이지 구현.">
+      <created>1672865811278</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1672865811278</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,6 +418,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/domain/member/MemberService.java</url>
           <line>34</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/MyPageController.java</url>
+          <line>447</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/MyPageController.java</url>
+          <line>451</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

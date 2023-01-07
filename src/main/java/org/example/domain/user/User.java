@@ -12,6 +12,7 @@ import org.example.domain.roleclass.guest.RoleGUEST;
 import org.example.domain.roleclass.user.RoleUSER;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -59,6 +60,7 @@ public class User extends BaseTimeEntity {
         this.email = email;
         this.picture = picture;
         this.role = role;
+
     }
 
     public User update(String name, String picture) {
