@@ -133,6 +133,7 @@ public class BaseController {
         model.addAttribute("workPlanLists", workPlanService.searchFindAllDesc());
         if(user!=null){
             model.addAttribute("userNameStr", user.getName());
+            model.addAttribute("user", user);
         }
         //세션 정보를 통해서, 뷰페이지 리턴 바꿈.
 /*

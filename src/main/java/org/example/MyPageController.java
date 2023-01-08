@@ -131,6 +131,79 @@ public class MyPageController {
 
         return "mypage/index";
     }
+    @GetMapping("/mypage/index2")
+    public String myPageIndex(Model model){
+        SessionUser user = (SessionUser) httpSession.getAttribute("user");
+        //회원 기본 정보를 저장할 User 객체 생성
+        User userBase = null;
+        String userEmail = user.getEmail();
+        userBase = userService.findByEmail(userEmail);
+        model.addAttribute("userBase", userBase);
+
+        if(user!=null) {
+            model.addAttribute("userNameStr", user.getName());
+
+            if (user.getRole().equals("GUEST")) {
+                model.addAttribute("userRoleStr", " 손님");
+                model.addAttribute("addDataTF", false);
+            } else if (user.getRole().equals("USER")) {
+                model.addAttribute("userRoleStr", "사용자");
+                model.addAttribute("addDataTF", true);
+                model.addAttribute("updateTF", false);
+                RoleUSER roleUSER = null;
+                try {
+                    //roleUSER = roleUSERService.findById(userBase.getId());
+                    roleUSER = userBase.getRoleUser();
+                }catch(Exception e){
+                    RoleUSER roleUser = null;
+                }
+                if(roleUSER!=null) {
+                    model.addAttribute("userAdd", roleUSER);
+                }else{
+                    model.addAttribute("userAdd", null);
+                }
+
+            } else if (user.getRole().equals("ADMIN")) {
+                model.addAttribute("userRoleStr", "관리자");
+                model.addAttribute("addDataTF", true);
+                model.addAttribute("updateTF", false);
+                RoleADMIN roleADMIN = null;
+                try{
+                    // roleADMIN = roleADMINService.findById(userBase.getId());
+                    roleADMIN = userBase.getRoleAdmin();
+                }catch(Exception e){
+                    RoleADMIN roleAdmin = null;
+                }
+
+                if(roleADMIN!=null){
+                    model.addAttribute("userAdd", roleADMIN);
+                }else{
+                    model.addAttribute("userAdd", null);
+                }
+
+            } else if (user.getRole().equals("COMPANY")) {
+                model.addAttribute("userRoleStr", "기업회원");
+                model.addAttribute("addDataTF", true);
+                model.addAttribute("updateTF", false);
+                RoleCOMPANY roleCOMPANY = null;
+                try{
+                    // roleCOMPANY = roleCOMPANYService.findById(userBase.getId());
+                    roleCOMPANY = userBase.getRoleCompany();
+                }catch(Exception e){
+                    RoleCOMPANY roleCompany = null;
+                }
+
+                if(roleCOMPANY!=null){
+                    model.addAttribute("userAdd", roleCOMPANY);
+                }else{
+                    model.addAttribute("userAdd", null);
+                }
+
+            }
+        }
+        model.addAttribute("roleRadioForm", new RoleRadioForm());
+        return "mypage/default/index2";
+    }
 
     @ModelAttribute("roleRadioItemTypes")
     public RoleRadioItemType[] roleItemTypes() {
